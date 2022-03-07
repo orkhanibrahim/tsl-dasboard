@@ -15,11 +15,11 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
            Match match = new Match();
            match.setId(Integer.parseInt(matchInput.getId()));
            match.setDate(LocalDate.parse(matchInput.getDate()));
-           match.setYear(LocalDate.parse(matchInput.getYear()));
-           match.setWeek(LocalDate.parse(matchInput.getWeek()));
+           match.setYear(matchInput.getYear());
+           match.setWeek(matchInput.getWeek());
            match.setHomeTeam(matchInput.getHomeTeam());
            match.setVisitorTeam(matchInput.getVisitorTeam());
-           match.setFullTimeResult(Integer.parseInt(matchInput.getResult()));
+           match.setFullTimeResult(matchInput.getFull_time_result());
            match.setHomeTeamGoal(matchInput.getHome_team_goal());
            match.setVisitorTeamGoal(matchInput.getVisitor_team_goal());
            match.setHalfTimeResult(matchInput.getHalf_time_result());
