@@ -13,14 +13,14 @@ public class MatchInput {
     private String week;
     private String homeTeam;
     private String visitorTeam;
-    private String full_time_result;
+    private String full_time_result_score;
     private String home_team_goal;
     private String visitor_team_goal;
     private String division;
     private String tier;
     private String totalgoal;
     private String goaldiff;
-    private String result;
+    private String match_winner;
     private String half_time_result;
     private String hgoal_half;
     private String vgoal_half;

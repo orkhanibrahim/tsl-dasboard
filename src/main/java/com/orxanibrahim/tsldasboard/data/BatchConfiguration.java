@@ -31,14 +31,14 @@ public class BatchConfiguration {
             "week",
             "homeTeam",
             "visitor_team",
-            "full_time_result",
+            "full_time_result_score",
             "home_team_goal",
             "visitor_team_goal",
             "division"
             ,"tier",
             "totalgoal",
             "goaldiff",
-            "result",
+            "matchWinner",
             "half_time_result",
             "hgoal_half",
             "vgoal_half",
@@ -80,10 +80,10 @@ public class BatchConfiguration {
     public JdbcBatchItemWriter<Match> writer(DataSource dataSource) {
         return new JdbcBatchItemWriterBuilder<Match>()
                 .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-                .sql("INSERT INTO match (id,date,year,week,home_team,visitor_team,full_time_result," +
-                        "home_team_goal,visitor_team_goal,half_time_result,home_red_card,visitor_red_card) " +
-                        "VALUES (:id,:date,:year,:week,:homeTeam,:visitorTeam,:fullTimeResult,:homeTeamGoal," +
-                        ":visitorTeamGoal,:halfTimeResult,:homeRedCard,:visitorRedCard)")
+                .sql("INSERT INTO match (id,date,year,week,home_team,visitor_team,full_time_result_score," +
+                        "home_team_goal,visitor_team_goal,half_time_result,home_red_card,visitor_red_card,match_winner)" +
+                        "VALUES (:id,:date,:year,:week,:homeTeam,:visitorTeam,:fullTimeResultScore,:homeTeamGoal," +
+                        ":visitorTeamGoal,:halfTimeResult,:homeRedCard,:visitorRedCard, :matchWinner)")
                 .dataSource(dataSource)
                 .build();
     }

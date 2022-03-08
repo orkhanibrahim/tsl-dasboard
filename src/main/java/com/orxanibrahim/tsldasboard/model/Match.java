@@ -12,13 +12,14 @@ import java.time.LocalDate;
 @Entity
 public class Match {
     @Id
-    private int id;
+    private long id;
     private LocalDate date;
     private String year;
     private String week;
     private String homeTeam;
     private String visitorTeam;
-    private String fullTimeResult;
+    private String fullTimeResultScore;
+    private String matchWinner;
     private String homeTeamGoal;
     private String visitorTeamGoal;
     private String halfTimeResult;
