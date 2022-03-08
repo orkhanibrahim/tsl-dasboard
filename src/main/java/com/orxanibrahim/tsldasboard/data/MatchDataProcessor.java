@@ -19,12 +19,13 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
            match.setWeek(matchInput.getWeek());
            match.setHomeTeam(matchInput.getHomeTeam());
            match.setVisitorTeam(matchInput.getVisitorTeam());
-           match.setFullTimeResult(matchInput.getFull_time_result());
+           match.setFullTimeResultScore(matchInput.getFull_time_result_score());
            match.setHomeTeamGoal(matchInput.getHome_team_goal());
            match.setVisitorTeamGoal(matchInput.getVisitor_team_goal());
            match.setHalfTimeResult(matchInput.getHalf_time_result());
            match.setVisitorRedCard(matchInput.getVisitor_red_card());
            match.setHomeRedCard(matchInput.getHome_red_card());
+           match.setMatchWinner(matchInput.getMatch_winner());
 
            return match;
         }
